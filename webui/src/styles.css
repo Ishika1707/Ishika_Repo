@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import  url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/* @import '../node_modules/primeng/resources/themes/bootstrap/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css'; */
+
+body {
+    background-image: url("./app/image/backgorund.gif");
+    background-repeat: no-repeat;
+    background-size: 1500px 800px;
+    font-family: 'Open Sans', sans-serif;   
+    color: ghostwhite;
+}
+.login_link {
+    background-image: url("./app/image/login_icon.jpg");
+    background-size: 300px 200px;
+    background-repeat: no-repeat;
+}
+
+.register_link {
+    background-image: url("./app/image/register_user.jpg");
+    background-size: 300px 200px;
+    background-repeat: no-repeat;
+}
+.align_link {
+    display: flex;
+    justify-content: center;
+}
+
+   

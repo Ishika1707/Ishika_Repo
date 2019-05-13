@@ -1,0 +1,82 @@
+
+<div class="user">
+  <h2 class="user-header">Register Here !</h2>
+<form [formGroup]="registerForm" class="user-container" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" formControlName="country" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" />
+        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+            <div *ngIf="f.country.errors.required">Country is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="designation">Designation</label>
+        <input type="text" formControlName="designation" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.designation.errors }" />
+        <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">
+            <div *ngIf="f.designation.errors.required">Designation is required</div>
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="mobileNumber">Mobile No.</label>
+        <input type="text" formControlName="mobileNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }" />
+        <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.mobileNumber.errors.minlength">Password must be 10 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+
+    <p>
+      <input type="submit" id="register" value="Register">
+    </p>
+ 
+</form>
+<div style="display: flex ; justify-content: space-around;">
+  <ul>
+    <li>
+      <a href="/home"> <img class="back_link" ></a>
+    </li>
+  </ul>
+  
+<!--<ng-template #content let-modal>
+<div class="modal-content" style="vertical-align: left;">
+  <div class="modal-body">
+    <h4 class="modal-title" id="modal-basic-title">User registration succesful</h4>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+ </div>
+</ng-template> -->
+
+<!--<div class="modal fade" tabindex="-1" role="dialog" id="user-success-modal" >
+  <div class="modal-dialog" role="document" style="vertical-align: middle;">
+    <div class="modal-content">
+      <div class="modal-header" align-items ="center"  style="padding: 0px; ">
+        <h3 class="modal-title" style="margin-top: 13px;margin-left: 10px" ><b>Message</b></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -32px;margin-right: 18px;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>User registration succesfull</p>
+      </div>
+      <div class="modal-footer">
+        <button title = "Login" type="button" class="btn btn-primary" (click)="deleteSchemas()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>-->

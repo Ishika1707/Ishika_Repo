@@ -1,0 +1,61 @@
+
+<div class="vm">
+  <h2 class="vm-header">Request for a VM here !</h2>
+<form [formGroup]="registerVMForm" class="vm-container" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="vmname">VM Name</label>
+        <input type="text" formControlName="vmname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.vmname.errors }" />
+        <div *ngIf="submitted && f.vmname.errors" class="invalid-feedback">
+            <div *ngIf="f.vmname.errors.required">Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ram">RAM</label>
+        <input type="text" formControlName="ram" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ram.errors }" />
+        <div *ngIf="submitted && f.ram.errors" class="invalid-feedback">
+            <div *ngIf="f.ram.errors.required">Country is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="os">OS</label>
+        <input type="text" formControlName="os" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.os.errors }" />
+        <div *ngIf="submitted && f.os.errors" class="invalid-feedback">
+            <div *ngIf="f.designation.os.required">Designation is required</div>
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="harddisk">Hard Disk</label>
+        <input type="text" formControlName="harddisk" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.harddisk.errors }" />
+        <div *ngIf="submitted && f.harddisk.errors" class="invalid-feedback">
+            <div *ngIf="f.harddisk.errors.minlength">Password must be 10 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="cpu">CPU</label>
+        <input type="text" formControlName="cpu" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cpu.errors }" />
+        <div *ngIf="submitted && f.cpu.errors" class="invalid-feedback">
+            <div *ngIf="f.cpu.errors.required">Password is required</div>
+        </div>
+    </div>
+     <div class="form-group">
+        <label for="purpose">Purpose of Usage</label>
+        <input type="text" formControlName="purpose" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.purpose.errors }" />
+        <div *ngIf="submitted && f.purpose.errors" class="invalid-feedback">
+            <div *ngIf="f.password.purpose.required">Password is required</div>
+        </div>
+    </div>
+
+    <p>
+      <input type="submit" value="Create Request">
+    </p>
+ 
+</form>
+<div style="display: flex ; justify-content: space-around;">
+  <ul>
+    <li>
+      <a href="/welcome"> <img class="back_link" ></a>
+    </li>
+  </ul>
+  
+</div>
+ </div>

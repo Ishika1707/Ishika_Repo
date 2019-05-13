@@ -1,0 +1,29 @@
+<p>
+  welcome {{username}}!
+</p>
+
+<button (click)="requestVMform()" type="button">Create VM request</button>
+<button (click)="logout()" type="button">Logout</button>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>VM Name</td>
+      <td>OS</td>
+      <td>RAM</td>
+      <td>Hard-Disk</td>
+      <td>CPU</td>
+      <td>Usage</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let d of data;">
+      <td>{{d.vm_name}}</td>
+      <td>{{d.os}}</td>
+      <td>{{d.ram}}</td>
+      <td>{{d.hardDisk}}</td>
+      <td>{{d.cpu}}</td>
+      <td>{{d.usage}}</td>
+    </tr>
+  </tbody>
+</table> 
